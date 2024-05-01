@@ -8,6 +8,7 @@ typedef struct tree
 
 tree* tree_create();
 void inorder(tree*);
+void preorder(tree*);
 
 tree* tree_create()
 {
@@ -63,5 +64,16 @@ void inorder(tree* root)
     printf("->%d",root->data);
     inorder(root->r_child);
     
+    return;
+}
+
+void preorder(tree* root)
+{
+    if(root==NULL)
+        return;
+    
+    printf("->%d",root->data);
+    preorder(root->l_child);
+    preorder(root->r_child);
     return;
 }
