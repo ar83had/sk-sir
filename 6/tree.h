@@ -6,6 +6,9 @@ typedef struct tree
     struct tree* l_child,*r_child;
 }tree;
 
+tree* tree_create();
+void inorder(tree*);
+
 tree* tree_create()
 {
     int n;
